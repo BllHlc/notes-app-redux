@@ -1,4 +1,4 @@
-# Notes App Redux [See it live](https://bllhlc-twitter.vercel.app/) ↗
+# Notes App Redux [See it live](https://notes-app-redux-omega.vercel.app/)) ↗
 
 This is a simple notes app built with React and Redux. It is a simple app that allows you to add, edit, and delete notes. It also allows you to filter notes by color. And it also allows you to filter notes by the text in the note.
 
