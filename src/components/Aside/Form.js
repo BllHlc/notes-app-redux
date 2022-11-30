@@ -1,15 +1,39 @@
-import React from "react";
-import { Button, Flex, Icon, IconButton, Textarea } from "@chakra-ui/react";
+import { useState } from "react";
+import { Button, Flex, Icon, IconButton, Textarea, useToast } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
+import { useDispatch } from "react-redux";
+import { addNote } from "../../redux/notes/notesSlice";
 
 const Form = () => {
+  const toast = useToast();
+  const [activeColor, setActiveColor] = useState("green.200");
+  const [content, setContent] = useState("");
+  const dispatch = useDispatch();
   const buttonColors = [
-    "pink.500",
-    "purple.600",
-    "yellow.500",
-    "blue.600",
-    "green.600",
+    "pink.200",
+    "purple.200",
+    "yellow.200",
+    "blue.200",
+    "green.200",
   ];
+
+  const handleAddNote = () => {
+    dispatch(addNote({ content, color: activeColor }));
+    setContent("");
+    toast({
+      title: "Note added.",
+      status: "success",
+      duration: 3000,
+      isClosable: true,
+    });
+  };
+
+  function butonBgColor(color) {
+    let bg = Number(color.split(".")[1]) + 300;
+    return color.split(".")[0] + "." + bg;
+  }
+
+
 
   return (
     <Flex
@@ -30,21 +54,24 @@ const Form = () => {
         border="0"
         spellCheck="false"
         _focusVisible={{ border: "0" }}
+        value={content}
+        onChange={(e) => setContent(e.target.value)}
       />
       <Flex justify="space-evenly">
         {buttonColors.map((color) => (
           <IconButton
             key={color}
             aria-label="Add a note"
-            icon={<Icon as={CheckIcon} />}
+            icon={color === activeColor ? <CheckIcon /> : <Icon as={CheckIcon} opacity="0" />}
             size="sm"
-            bg={color}
+            bg={butonBgColor(color)}
             variant="ghost"
             mx="1"
             color="white"
             borderRadius="full"
             _hover={{ bg: color }}
             _active={{ bg: color }}
+            onClick={() => setActiveColor(color)}
           />
         ))}
       </Flex>
@@ -57,6 +84,8 @@ const Form = () => {
         _hover={{ bg: "#7928CA" }}
         _active={{ bg: "#7928CA" }}
         transition="all 0.4s ease-in-out"
+        onClick={handleAddNote}
+        disabled={content.length === 0}
       >
         ADD NOTE
       </Button>

@@ -1,7 +1,12 @@
 import { Box, Flex, Select, Text } from "@chakra-ui/react";
 import React from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { category } from '../../redux/notes/notesSlice';
 
 const Category = () => {
+  const dispatch = useDispatch();
+  const activeCategory = useSelector(state => state.notes.activeCategory);
+
   return (
     <Flex mt="4" flexDirection="column" alignItems="center" w="100%">
       <Text
@@ -21,14 +26,16 @@ const Category = () => {
           placeholder="All Notes"
           border="none"
           _focusVisible={{ border: "none" }}
-        // value={activeCategory}
-        // onChange={(e) => dispatch(category(e.target.value))}
+          value={activeCategory}
+          onChange={(e) => {
+            dispatch(category(e.target.value));
+          }}
         >
-          <option value="green.300">Green Notes</option>
-          <option value="blue.300">Blue Notes</option>
-          <option value="orange.300">Orange Notes</option>
-          <option value="purple.300">Purple Notes</option>
-          <option value="red.300">Red Notes</option>
+          <option value="green.200">Green Notes</option>
+          <option value="blue.200">Blue Notes</option>
+          <option value="yellow.200">Yellow Notes</option>
+          <option value="purple.200">Purple Notes</option>
+          <option value="pink.200">Pink Notes</option>
         </Select>
       </Box>
     </Flex>
