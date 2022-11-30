@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Notes App Redux [See it live](https://bllhlc-twitter.vercel.app/) ↗
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple notes app built with React and Redux. It is a simple app that allows you to add, edit, and delete notes. It also allows you to filter notes by color. And it also allows you to filter notes by the text in the note.
 
-## Available Scripts
+### Dependencies
 
-In the project directory, you can run:
+What things you need to install the software and how to install them
 
-### `npm start`
+- React-Redux
+- Redux Toolkit
+- Chakra UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Note Add
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Note Add](https://user-images.githubusercontent.com/77120913/204929624-5152bd72-0337-465b-bcd1-6c649e135ad1.png)
 
-### `npm test`
+# Note Edit
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Note Edit ](https://user-images.githubusercontent.com/77120913/204929627-f4ffbf95-9f0f-4d5c-b643-370a728ecb77.png)
 
-### `npm run build`
+# Note Filter By Color
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Todo Filter](https://user-images.githubusercontent.com/77120913/204929620-b0be0eae-5f85-4214-b528-2d4ba822a657.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Todo Filter By Text
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Todo Filter By Text](https://user-images.githubusercontent.com/77120913/204929614-8453a137-bd04-482b-b433-48aeac3d49ae.png)
 
-### `npm run eject`
+## Authors
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Bilal Halıcı**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project is licensed under the MIT License - see the [LICENSE.md](./todo-app-redux/clients/LICENSE) file for details
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contact
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Bilal Halıcı - [linkedin](https://www.linkedin.com/in/bilal-halici/)
